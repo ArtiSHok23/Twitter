@@ -1,6 +1,10 @@
-body {
+body{
     font-size: 18px;
     font-family: 'Noto Sans', sans-serif;
+}
+hr{
+    margin: 0;
+    border-color: rgba(237, 239, 242, .3);
 }
 .dark-blue{
     color: blue;
@@ -35,21 +39,46 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.48;
+    font-size: 18px;
+    border-radius: 5px;
 }
 .popup__header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    font-size: 24px;
+    font-weight: 500;
 }
-.popup__body{
+.popup__header-title{
 
 }
+.popup__header-close{
+    font-size: 30px;
+    font-weight: 700;
+    color: #6c757d;
+}
+.popup__body{
+    padding: 15px 15px;
+}
 .popup__footer{
+    padding: 15px 15px;
     display: flex;
     justify-content: flex-end;
 }
+.btn{
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+}
 .popup__footer-close-btn{
-    background-color: aliceblue;
+    margin-right: 10px;
+    background-color: #6c757d;
 }
 .popup__footer-save-btn{
-    background-color: aqua;
+    background-color: #1c7bff;
 }
