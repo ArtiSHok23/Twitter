@@ -1,0 +1,55 @@
+body {
+    font-size: 18px;
+    font-family: 'Noto Sans', sans-serif;
+}
+.dark-blue{
+    color: blue;
+}
+.blue{
+    color: rgb(32, 176, 219);
+}
+.red{
+    color: red;
+}
+.gray{
+    color: gray;
+}
+.container__text{
+    margin-left: -20px;
+    line-height: 1.28;
+    font-size: 16px;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 500;
+}
+.popup-bg{
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0; 
+}
+.popup{
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.popup__header{
+    display: flex;
+    justify-content: space-between;
+}
+.popup__body{
+
+}
+.popup__footer{
+    display: flex;
+    justify-content: flex-end;
+}
+.popup__footer-close-btn{
+    background-color: aliceblue;
+}
+.popup__footer-save-btn{
+    background-color: aqua;
+}
