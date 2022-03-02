@@ -1,7 +1,9 @@
 body{
+    box-sizing: border-box;
     background-color: #eff1f4;
 }
 .container{
+    font-family: 'Roboto', sans-serif;
     position: fixed;
     display: flex;
     width: 100%;
@@ -11,14 +13,59 @@ body{
 }
 .card{
     margin: 0 auto;
-    background-color: #fff;
-    width: 700px;
+    width: 800px;
     height: 280px;
     border-radius: 10px;
+    display: flex;
 }
 .card-1{
     margin-top: 70px;
 }
 .card-2{
     margin-bottom: 70px;
+    background-color: #fff;
+}
+.card-parts{
+    color: #111;
+    background-color: #fff;
+}
+.card__left-part{
+    position: relative;
+    text-align: center;
+    flex-basis: 25%;
+    border-right: 2px solid #eff1f4;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.card__right-part{
+    flex-basis: 75%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.upper-desc{
+    background-color: #35c772;
+    border-radius: 15px;
+    padding: 4px 10px;
+    color: #fff;
+    position: absolute;
+    top: -12px;
+    left: 10%;
+    font-size: 14px;
+}
+.price{
+    margin: 15px;
+    margin-top: 27px;
+    font-weight: 900;
+    font-size: 24px;
+}
+.button{
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin: 0 10px;
+    border: none;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ff6f32;
+    font-size: 18px;
+    font-weight: 500;
 }
