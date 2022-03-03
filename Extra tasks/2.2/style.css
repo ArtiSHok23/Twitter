@@ -5,6 +5,9 @@ body{
 img{
     width: 50px;
 }
+img:hover{
+    transform: scale(1.1);
+}
 hr{
     border: none;
 }
@@ -23,6 +26,10 @@ hr{
     height: 300px;
     border-radius: 10px;
     display: flex;
+}
+.card:hover{
+    box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, .1);
+    cursor: pointer;
 }
 .card-1{
     margin-top: 50px;
@@ -83,6 +90,11 @@ hr{
     font-size: 18px;
     font-weight: 500;
 }
+.button:hover{
+    background-color: #d35c28;
+    color: rgb(226, 225, 225);
+    cursor: pointer;
+}
 .descr{
     margin: 15px;
     padding: 0 5px;
@@ -127,6 +139,9 @@ hr{
 }
 .star{
     margin-right: -10px;
+}
+.star:hover{
+    fill: #1f77ff;
 }
 /*-----------footer--------------*/
 .content{
@@ -180,6 +195,11 @@ hr{
     height: 5px;
     background-color: #ccd3dd;
     border-radius: 5px;
+    border: 1px solid #ccd3dd;
+}
+.left-line:hover{
+    border: 1px solid #ff6f32;
+    background-color: #fff;
 }
 .center-line{
     flex-basis: 15%;
@@ -188,14 +208,25 @@ hr{
     border-radius: 5px;
     margin: 0 1px;
 }
+.center-line:hover{
+    background-color: #ff6f32;
+    cursor: default;
+}
 .right-line{
     flex-basis: 60%;
     height: 5px;
     background-color: #ccd3dd;
     border-radius: 5px;
 }
+.right-line:hover{
+    border: 1px solid #ff6f32;
+    background-color: #fff;
+}
 .plane{
     height: 25px;
+}
+.plane:hover{
+    transform: scale(1.1);
 }
 .path-time{
     color: #ccd3de;
@@ -208,6 +239,10 @@ hr{
 }
 .dest{
     margin-top: 10px;
+}
+.dest:hover{
+    color: #ff6f32;
+    cursor: default;
 }
 .dest-1{
     flex-basis: 25%;
