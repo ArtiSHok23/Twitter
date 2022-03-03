@@ -2,6 +2,10 @@ body{
     box-sizing: border-box;
     background-color: #eff1f4;
 }
+img{
+    width: 50px;
+    border-radius: 50%;
+}
 .container{
     font-family: 'Roboto', sans-serif;
     position: fixed;
@@ -13,8 +17,8 @@ body{
 }
 .card{
     margin: 0 auto;
-    width: 800px;
-    height: 280px;
+    width: 850px;
+    height: 300px;
     border-radius: 10px;
     display: flex;
 }
@@ -32,16 +36,18 @@ body{
 .card__left-part{
     position: relative;
     text-align: center;
-    flex-basis: 25%;
+    flex-basis: 30%;
     border-right: 2px solid #eff1f4;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
 .card__right-part{
-    flex-basis: 75%;
+    flex-basis: 70%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    padding: 10px;
 }
+/*----------left-part------------*/
 .upper-desc{
     background-color: #35c772;
     border-radius: 15px;
@@ -52,6 +58,9 @@ body{
     left: 10%;
     font-size: 14px;
 }
+.second{
+    background-color: #b983f1;
+}
 .price{
     margin: 15px;
     margin-top: 27px;
@@ -59,7 +68,7 @@ body{
     font-size: 24px;
 }
 .button{
-    padding: 12px 20px;
+    padding: 12px 30px;
     border-radius: 10px;
     margin: 0 10px;
     border: none;
@@ -69,3 +78,11 @@ body{
     font-size: 18px;
     font-weight: 500;
 }
+.descr{
+    margin: 15px;
+    padding: 0 5px;
+    color: #ff6f32;
+    font-size: 16px;
+    font-weight: 600;
+}
+/*----------right-part------------*/
