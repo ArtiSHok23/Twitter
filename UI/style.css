@@ -5,6 +5,8 @@
     --background-color: #ddddda;
     --footer-gray: #787878;
     --dark-text: #555353;
+    --tweet-header: #c4c4c4;
+    --tweet-header-dark: #919090;
     --light-text: rgba(85, 83, 83, .4);
 }
 *{
@@ -123,17 +125,100 @@ header{
     font-size: 18px;
     font-weight: 700;
 }
-
 /*---------------tweets----------------*/
 .tweets{
     background-color: var(--main-color);
     flex-basis: 58%;
     border-radius: 40px;
+    display: flex;
+    flex-direction: column;
 }
 .main-right{
     background-color: var(--main-color);
     flex-basis: 25%;
     border-radius: 40px;
+}
+.tweet:hover{
+    cursor: pointer;
+}
+.tweets-list{
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-top: 10px;
+    height: 250px;
+    width: 700px;
+    margin-bottom: 10px;
+    overflow: scroll;
+    border: 1px solid var(--tweet-header);
+    background-color: var(--white-color)
+}
+.tweet-header{
+    background-color: var(--tweet-header);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.tweet-name{
+    color: var(--dark-text);
+}
+.tweet-date{
+    color: var(--main-color);
+}
+.tweet-body{
+    padding: 10px;
+}
+.tweet-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: -6px 0px 0px 5px;
+}
+.tweet-footer-left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: -510px;
+}
+.time{
+    margin-right: 10px;
+    font-weight: 500;
+    color: var(--dark-text);
+}
+.tweet-icons{
+    font-size: 10px;
+    font-weight: 700;
+    position: relative;
+}
+.tweet-icons:hover{
+    transform: scale(1.05);
+}
+.count{
+    color: var(--main-color);
+    font-size: 12px;
+    font-weight: 700;
+    position: absolute;
+    top: 25px;
+    left: 38px;
+}
+.show-button{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    background-color: var(--tweet-header);
+    color: var(--white-color);
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+    padding: 5px 30px;
+    margin: 0 auto;
+    width: 200px;
+    margin-bottom: 10px;
+}
+.show-button:hover{
+    background-color: var(--tweet-header-dark);
+    cursor: pointer;
+    transform: scale(1.02);
 }
 /*-----------footer----------------*/
 footer{
