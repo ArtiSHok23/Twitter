@@ -1,8 +1,11 @@
 :root{
     --main-color: #4a707a;
+    --dark-main: #3d5c64;
     --white-color: #fffdfd;
     --background-color: #ddddda;
     --footer-gray: #787878;
+    --dark-text: #555353;
+    --light-text: rgba(85, 83, 83, .4);
 }
 *{
     box-sizing: border-box;
@@ -33,7 +36,7 @@ header{
 .header-right{
     display: flex;
     align-items: center;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
 }
 .user-name, .exit-btn:hover{
@@ -52,6 +55,8 @@ header{
 }
 .nav-main:hover{
     cursor: pointer;
+    color: var(--dark-main);
+    transform: scale(1.01);
 }
 /*-----------main----------------*/
 .main-content{
@@ -66,11 +71,60 @@ header{
     flex-basis: 73%;
     justify-content: space-between;
 }
+/*------------tweet-form----------------*/
 .tweet-subm{
     background-color: var(--white-color);
     flex-basis: 40%;
     border-radius: 40px;
 }
+.writer-name{
+    color: var(--dark-text);
+    font-size: 24px;
+    font-weight: 700;
+    align-self: flex-start;
+    margin: 10px 0 5px 40px;
+}
+.writer-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.writer-message{
+    border: 2px solid var(--main-color); 
+    width: 685px;
+    height: 130px;
+    border-radius: 30px;
+    margin: 0 auto;
+}
+.submit-tweet-btn{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+    padding: 5px 30px;
+    margin-top: 10px;
+}
+.submit-tweet-btn:hover{
+    cursor: pointer;
+    background-color: var(--dark-main);
+    transform: scale(1.02);
+}
+.writer-message::placeholder {
+    display: flex;
+    color: var(--light-text);
+    position: absolute;
+    left: 18px;
+    top: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/*---------------tweets----------------*/
 .tweets{
     background-color: var(--main-color);
     flex-basis: 58%;
