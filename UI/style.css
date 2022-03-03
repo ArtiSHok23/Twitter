@@ -1,9 +1,15 @@
+:root{
+    --main-color: #4a707a;
+    --white-color: #fffdfd;
+    --background-color: #ddddda;
+    --footer-gray: #787878;
+}
 *{
     box-sizing: border-box;
 }
 body{
     font-family: 'Montserrat', sans-serif;
-    background-color: #ddddda;
+    background-color: var(--background-color);
 }
 a{
     text-decoration: none;
@@ -15,9 +21,9 @@ a{
 }
 /*------------header--------------*/
 header{
-    background-color: #4a707a;
+    background-color: var(--main-color);
     height: 55px;
-    color: #fff;
+    color: var(--white-color);
 }
 .header-content{
     display: flex;
@@ -40,16 +46,44 @@ header{
     align-items: center;
     justify-content: flex-start;
     text-decoration: underline;
-    color: #4a707a;
+    color: var(--main-color);
     font-size: 20px;
     font-weight: 500;
 }
 .nav-main:hover{
     cursor: pointer;
 }
+/*-----------main----------------*/
+.main-content{
+    display: flex;
+    justify-content: space-between;
+    height: 568px;
+    margin-bottom: 15px;
+}
+.main-left{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 73%;
+    justify-content: space-between;
+}
+.tweet-subm{
+    background-color: var(--white-color);
+    flex-basis: 40%;
+    border-radius: 40px;
+}
+.tweets{
+    background-color: var(--main-color);
+    flex-basis: 58%;
+    border-radius: 40px;
+}
+.main-right{
+    background-color: var(--main-color);
+    flex-basis: 25%;
+    border-radius: 40px;
+}
 /*-----------footer----------------*/
 footer{
-    background-color: #787878;
+    background-color: var(--footer-gray);
     height: 75px;
 }
 .footer-content{
@@ -59,7 +93,7 @@ footer{
     justify-content: space-between;
 }
 .footer-content a{
-    color: #fff;
+    color: var(--white-color);
     font-size: 20px;
     font-weight: 500;
 }
