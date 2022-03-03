@@ -5,6 +5,10 @@ body{
     font-family: 'Montserrat', sans-serif;
     background-color: #ddddda;
 }
+a{
+    text-decoration: none;
+    display: block;
+}
 .container{
     max-width: 1000px;
     margin: 0 auto;
@@ -29,7 +33,7 @@ header{
 .user-name, .exit-btn:hover{
     cursor: pointer;
 }
-/*-----------main----------------*/
+/*-----------navigation----------------*/
 .nav{
     height: 50px;
     display: flex;
@@ -42,4 +46,31 @@ header{
 }
 .nav-main:hover{
     cursor: pointer;
+}
+/*-----------footer----------------*/
+footer{
+    background-color: #787878;
+    height: 75px;
+}
+.footer-content{
+    display: flex;
+    height: 75px;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-content a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+.footer-left, .footer-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer-left{
+    align-items:flex-start;
+}
+.footer-right{
+    align-items:flex-end;
 }
