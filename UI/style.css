@@ -3,15 +3,17 @@
 }
 body{
     font-family: 'Montserrat', sans-serif;
-}
-header{
-    background-color: #4A707A;
-    height: 55px;
-    color: #fff;
+    background-color: #ddddda;
 }
 .container{
     max-width: 1000px;
     margin: 0 auto;
+}
+/*------------header--------------*/
+header{
+    background-color: #4a707a;
+    height: 55px;
+    color: #fff;
 }
 .header-content{
     display: flex;
@@ -23,4 +25,21 @@ header{
     align-items: center;
     font-size: 24px;
     font-weight: 500;
+}
+.user-name, .exit-btn:hover{
+    cursor: pointer;
+}
+/*-----------main----------------*/
+.nav{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: underline;
+    color: #4a707a;
+    font-size: 20px;
+    font-weight: 500;
+}
+.nav-main:hover{
+    cursor: pointer;
 }
