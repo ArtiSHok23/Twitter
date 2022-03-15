@@ -468,3 +468,29 @@ footer{
 .footer-right{
     align-items:flex-end;
 }
+
+/*twit.html*/
+.tweet-content{
+    background-color: var(--main-color);
+    padding: 10px;
+    border-radius: 20px;
+}
+.main-tweet__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--tweet-header-dark);
+    color: var(--main-color);
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 10px 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.tw-comments{
+    background-color: var(--main-color);
+    align-items: center;
+}
+.comment-list{
+   width: 1200px;
+}
