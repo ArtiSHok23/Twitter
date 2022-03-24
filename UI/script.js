@@ -155,12 +155,14 @@ let tweets = [
 
     function getTweet(currId) {
         return tweets.find(item => item.id === String(currId)) || 'Invalid id';
+        // return false / null
     }
 
     function validateTweet(tw) {
-        const i = Number(tw);
+        const i = Number(tw); // передать сам твит, а не индекс массива 
     
-        if(tweets[i].id === 'string' && tweets[i].text === 'string' && tweets[i].author === 'string') {
+        if(tweets[i].id === 'string' && tweets[i].text === 'string' && tweets[i].text.lenght <= 280 && tweets[i].author === 'string' ) {
+        //typeof array 
             return true;
         } else {
             return false;
@@ -190,7 +192,7 @@ let tweets = [
     } */
 
     function changeUser(usr) {
-        if (usr = 'string') {
+        if (usr === 'string') { // не проверка типа
             user = usr;
             alert('Пользователь успешно изменён!');
         } else {
@@ -198,4 +200,4 @@ let tweets = [
         }
     }
 
-}());
+}()); // дать имя moduleDotChangeUser
