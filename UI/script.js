@@ -1,203 +1,45 @@
-let tweets = [
-    {
-        id: '1',
-        text: 'Привет! #js',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Винина Анастасия',
-        comment: [],
-    },
-    {
-        id: '2',
-        text: 'Привет!',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Радченко Виктория',
-        comment: [],
-    },
-    {
-        id: '3',
-        text: 'Привет! #js №2022',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Радченко Виктория',
-        comment: [],
-    },
-    {
-        id: '4',
-        text: 'Привет! #js',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Радченко Виктория',
-        comment: [],
-    },
-    {
-        id: '5',
-        text: 'Привет! #js',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Радченко Виктория',
-        comment: [],
-    },
-    {
-        id: '6',
-        text: 'Привет! #js',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Радченко Виктория',
-        comment: [],
-    },
-    {
-        id: '7',
-        text: 'Привет! #js',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Радченко Виктория',
-        comment: [],
-    },
-    {
-        id: '8',
-        text: 'Привет! #js',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Радченко Виктория',
-        comment: [],
-    },
-    {
-        id: '9',
-        text: 'Привет! #js',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Радченко Виктория',
-        comment: [],
-    },
-    {
-        id: '10',
-        text: 'Приветю Как дела?',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Отступов Александр',
-        comment: [],
-    },
-    {
-        id: '11',
-        text: 'Привет! #js',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Радченко Виктория',
-        comment: [],
-    },
-    {
-        id: '12',
-        text: 'Привет! #js',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Радченко Виктория',
-        comment: [],
-    },
-    {
-        id: '13',
-        text: 'Привет! #js',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Радченко Виктория',
-        comment: [],
-    },
-    {
-        id: '14',
-        text: 'Привет! #js',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Радченко Виктория',
-        comment: [],
-    },
-    {
-        id: '15',
-        text: 'Привет! #js',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Радченко Виктория',
-        comment: [],
-    },
-    {
-        id: '16',
-        text: 'Привет! #js',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Радченко Виктория',
-        comment: [],
-    },
-    {
-        id: '17',
-        text: 'Привет! #js',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Радченко Виктория',
-        comment: [],
-    },
-    {
-        id: '18',
-        text: 'Привет! #js',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Радченко Виктория',
-        comment: [],
-    },
-    {
-        id: '19',
-        text: 'Привет! #js',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Радченко Виктория',
-        comment: [],
-    },
-    {
-        id: '20',
-        text: 'Привет! #js',
-        createdAt: new Date('2022-03-0N23:00:00'),
-        author: 'Радченко Виктория',
-        comment: [],
-    },
+class Tweet {
+  static maxTextLength = 280;
 
-];
+  constructor(id, text, createAt, author, comments) {
+    this._id = id;
+    this.text = text;
+    this.createAt = new Date(createAt);
+    this.author = author;
+    this.comments = comments;
+  }
 
-/* let cloneTweets = JSON.parse(JSON.stringify(tweets)); */
+  set id(id) {
+    if(typeof id === 'string') {    
+        id.trim().toLowerCase();
+        this._id = id;
+    } 
+  }
 
-(function() {
-    let user = 'Current_author';
+  get id() {
+    return this._id;
+  }
 
-    function getTweets(skipFrom = 0, skipTo = 10, filterConfig) {
-        const newTweets = tweets.slice(skipFrom, skipTo);
+  setText(newText) {
+      if(typeof newText === 'string' && newText.length <= Tweet.maxTextLength) {
+          this.text = newText;
+      } 
+  }
 
-        return newTweets;
+  static validate(tweet) {
+    if (typeof tweet.id === 'string' &&
+        typeof tweet.text === "string" &&
+        typeof tweet.text <= Tweet.maxTextLength &&
+        typeof tweet.author === "string"
+    ) {
+        return true;
+    } else {
+        return false;
     }
+  }
+}
 
-    function getTweet(currId) {
-        return tweets.find(item => item.id === String(currId)) || 'Invalid id';
-        // return false / null
-    }
 
-    function validateTweet(tw) {
-        const i = Number(tw); // передать сам твит, а не индекс массива 
-    
-        if(tweets[i].id === 'string' && tweets[i].text === 'string' && tweets[i].text.lenght <= 280 && tweets[i].author === 'string' ) {
-        //typeof array 
-            return true;
-        } else {
-            return false;
-        }
-    }
 
-    /* function addTweet() {
 
-    }
 
-    function editTweet() {
-
-    }
-
-    function removeTweet() {
-
-    }
-
-    function validateComment(com) {
-        const i = Number(com);
-    
-       
-    }
-
-    function addComment() {
-
-    } */
-
-    function changeUser(usr) {
-        if (usr === 'string') { // не проверка типа
-            user = usr;
-            alert('Пользователь успешно изменён!');
-        } else {
-            alert('Неверное имя пользователя');
-        }
-    }
-
-}()); // дать имя moduleDotChangeUser
